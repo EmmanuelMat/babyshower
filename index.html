@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby Shower Gift List</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img class="bigimage" src="./assets/Emma Juliette.png" alt="" />
+      <div id="user-info" class="user-info" style="display: none">
+        <span id="user-name" class="user-name"></span>
+        <a
+          id="logout-link"
+          href="javascript:void(0);"
+          onclick="logout()"
+          class="logout-link"
+          >Logout</a
+        >
+      </div>
+      <a
+        id="login-link"
+        href="javascript:void(0);"
+        onclick="openPopup()"
+        class="login-link"
+        style="display: none"
+        >Login</a
+      >
+    </div>
+    <div class="amazon-link-container">
+      <p>Si decides escoger alguno, te agradeceríamos que marques RESERVADO.</p>
+      <p>
+        Si deseas ordenar por Amazon, aquí te dejamos un enlace directo de
+        nuestra Lista de Regalos:
+        <a
+          href="https://www.amazon.com/baby-reg/gina-valera-enero-2025-doral/5TTD3LWAM2FJ"
+          target="_blank"
+          class="amazon-link"
+        >
+          LISTA DE REGALOS DE AMAZON
+        </a>
+      </p>
+      <p>
+        -Algunas tiendas físicas donde podrás encontrar los productos son:
+        <a href="https://bebemundo.com.do/" target="_blank" class="amazon-link"
+          >Bebe Mundo</a
+        >,
+        <a
+          href="https://lanoviadevilla.com"
+          target="_blank"
+          class="amazon-link"
+        >
+          La Novia de Villa</a
+        >,
+        <a
+          href="https://isaandkate.com/collections/all"
+          target="_blank"
+          class="amazon-link"
+          >Isa and Kate</a
+        >,
+        <a
+          href="https://www.instagram.com/kidsstuffrd/?hl=en"
+          target="_blank"
+          class="amazon-link"
+          >Kids Stuff</a
+        >*
+      </p>
+      <p>-Para pañales y toallitas húmedas sugerimos Pampers o Huggies*</p>
+    </div>
+
+    <div class="gift-list" id="gift-list">
+      <div
+        id="1"
+        class="gift-item gift-top"
+        style="position: sticky; top: 0; background-color: white; z-index: 100"
+      >
+        <label style="font-weight: bold">Reservado</label>
+        <label style="font-weight: bold">PRODUCTO</label>
+        <div style="font-weight: bold" class="hover-image">Foto</div>
+      </div>
+    </div>
+
+    <div id="login-popup" class="popup">
+      <div class="popup-content">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <h2>Registrate</h2>
+        <form id="login-form">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" required />
+
+          <label for="ping">Clave:</label>
+          <input type="number" id="ping" required />
+          <div id="exist" style="display: none"></div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
