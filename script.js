@@ -1,6 +1,6 @@
 const urlApi = "https://66f63057436827ced9762edb.mockapi.io/api/v1"
 async function select(e) {
-    const id = sessionStorage.getItem("userId")
+    const id = sessionStorage.getItem("userName")
 
     if (!id) {
         e.preventDefault();
@@ -37,7 +37,7 @@ fetch(`${urlApi}/gift`)
     .then(res => res.json())
     .then(products => {
         console.log(products);
-        const id = sessionStorage.getItem("userId")
+        const id = sessionStorage.getItem("userName")
 
         let bibImage = "https://example.com/bib.jpg";
         const giftList = document.getElementById("gift-list");
@@ -78,10 +78,12 @@ function closePopup() {
     document.getElementById("login-popup").style.display = "none";
     location.reload(true)
 }
+
 async function login(event) {
     event.preventDefault();
     const name = document.getElementById("name").value;
     const ping = document.getElementById("ping").value;
+    
 
     const url = 'https://66f63057436827ced9762edb.mockapi.io/api/v1/user';
 

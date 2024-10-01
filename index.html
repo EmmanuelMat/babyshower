@@ -87,12 +87,11 @@
         <span class="close-button" onclick="closePopup()">&times;</span>
         <h2>Registrate</h2>
         <form id="login-form">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" required />
-
+          <label for="name">Telefono:</label>
+          <input type="text" id="name" required step="any" pattern="[0-9]*" maxlength="10" inputmode="numeric">
           <label for="ping">Clave:</label>
-          <input type="number" id="ping" required />
-          <div id="exist" style="display: none"></div>
+          <input type="text" pattern="\d{4}" id="ping" inputmode="numeric" maxlength="4" required>
+          <span id="exist"></span>
           <button type="submit">Enviar</button>
         </form>
       </div>
